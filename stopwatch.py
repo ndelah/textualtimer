@@ -1,5 +1,5 @@
 from textual.app import App, ComposeResult
-from textual.widgets import Header
+from textual.widgets import Header, Footer
 
 class StopwatchApp(App):
     """A Textual app that displays a stopwatch."""
@@ -8,6 +8,7 @@ class StopwatchApp(App):
         """Create child widgets here."""
 
         yield Header()
+        yield Footer()
 
 if __name__ == "__main__":
     app = StopwatchApp()
