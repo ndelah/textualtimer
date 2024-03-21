@@ -2,6 +2,11 @@ from textual.app import App, ComposeResult
 from textual.containers import ScrollableContainer
 from textual.widgets import Header, Footer, Static, Button
 
+class TimeDisplay(Static):
+    """A widget that displays the current time."""
+
+
+
 class Stopwatch(Static):
     """A stopwatch widget"""
 
@@ -11,6 +16,7 @@ class Stopwatch(Static):
         yield Button("Start", id="start", variant="success")
         yield Button("Stop", id="stop", variant="error")
         yield Button("Reset", id="reset")
+        yield TimeDisplay("00:00:00")
         
         
 
